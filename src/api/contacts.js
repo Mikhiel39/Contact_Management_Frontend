@@ -1,6 +1,5 @@
-import axios from 'axios';
-
+import axios from "axios";
 
 export default axios.create({
-  baseURL: "http://localhost:5000/",
+  baseURL: "https://contact-management-backend-1-jp7h.onrender.com",
 });
