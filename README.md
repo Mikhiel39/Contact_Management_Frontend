@@ -1,25 +1,24 @@
 # About
+
 In this appliication user can add a contact, delete, update amd serach a contact. For storing data I have used a JSON server which is connected to the application.
 
 Screen-shots:
 
 - List of all the contacts
-<img src="https://user-images.githubusercontent.com/46750877/147806092-e7bf76d2-14cd-4488-bcb6-a50ae6e78ae6.PNG" height="300" width="800">
+  <img src="https://user-images.githubusercontent.com/46750877/147806092-e7bf76d2-14cd-4488-bcb6-a50ae6e78ae6.PNG" height="300" width="800">
 
-- Can add the contacts 
-<img src="https://user-images.githubusercontent.com/46750877/147806096-f1e29b8c-2cfc-4076-a524-7f78b1933265.PNG" height="300" width="800">
+- Can add the contacts
+  <img src="https://user-images.githubusercontent.com/46750877/147806096-f1e29b8c-2cfc-4076-a524-7f78b1933265.PNG" height="300" width="800">
 
 - Can edit the contacts
-<img src="https://user-images.githubusercontent.com/46750877/147806095-b2cdcc0d-d3b4-4839-809e-2a791a8284e5.PNG" height="300" width="800">
+  <img src="https://user-images.githubusercontent.com/46750877/147806095-b2cdcc0d-d3b4-4839-809e-2a791a8284e5.PNG" height="300" width="800">
 
 - Searching of the contact
-<img src="https://user-images.githubusercontent.com/46750877/147806094-8d322275-6bb5-4edb-8bef-3d44d73df7e0.PNG" height="300" width="800">
+  <img src="https://user-images.githubusercontent.com/46750877/147806094-8d322275-6bb5-4edb-8bef-3d44d73df7e0.PNG" height="300" width="800">
 
 - The contacts that appear on the list are stored in this JSON file and if we add a contact from app then it will also be added in the JSON file and edit works the same.
 
 ![apiJSON](https://user-images.githubusercontent.com/46750877/147806091-4053ed19-a28a-4a7d-b7a9-105299418de2.PNG)
-
-
 
 # Getting Started with Create React App
 
@@ -91,3 +90,60 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Project Description
+
+This project is a Contact Management System designed as a mini-feature for a CRM application. It provides a user-friendly interface for managing customer or client information. The solution includes both a frontend built with React and Material UI and a backend powered by Node.js with REST APIs connected to a PostgreSQL database.
+
+# Major Technical Decisions:
+
+# # Frontend:
+
+Material UI for a clean, responsive design.
+
+# # Backend:
+
+Express.js for its simplicity and flexibility.
+
+# # Database:
+
+MongoDB for relational data and strong query capabilities.
+
+# # REST API:
+
+Clear separation of concerns between the frontend and backend.
+
+# How Each Part Works:
+
+# # Frontend:
+
+Contact Form: A form built with Material UI TextFields and a Submit button. Validates input fields before sending data to the backend.
+Contacts Table: Displays contacts with features like sorting, pagination, and action buttons for edit and delete.
+API Integration: Uses axios to communicate with the backend API endpoints.
+Backend:
+
+CRUD APIs: Routes are set up to handle all required operations.
+Validation: Ensures valid data using middleware before interacting with the database.
+Error Handling: Custom error responses for invalid requests or server issues.
+Database:
+
+Stores all contact information with appropriate indexing for efficient query performance.
+
+# Challenges Faced and Solutions
+
+# # Challenge: Efficient Pagination and Sorting
+
+Problem: Managing large datasets without overloading the frontend.
+Solution: Implemented server-side pagination and sorting in the API to send only necessary data.
+Challenge: Input Validation
+
+Problem: Ensuring clean data and preventing duplicates in the database.
+Solution: Added backend validations for unique email and mandatory fields, and utilized regex for phone number validation.
+Challenge: Error Handling
+
+Problem: Displaying meaningful error messages to users.
+Solution: Implemented consistent error messages from the backend and displayed them in the frontend using Material UI’s Snackbar component.
+Challenge: Frontend-Backend Communication
+
+Problem: Managing API calls and state updates.
+Solution: Used React’s state management with hooks to update the table dynamically after any CRUD operation.
